@@ -2,7 +2,7 @@
 ## Project 1 – Community Detection in a Facebook network
 ### Aim
 The aim of this project is to build a tool to identify communities and influencers in a social network. The tool should be able to:
-- Load a social graph
+- ~~Load a social graph~~
 - Run community detection and some analytical algorithms
 - Visualize the network
 
