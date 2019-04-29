@@ -2,13 +2,13 @@
 ## Project 1 – Community Detection in a Facebook network
 ### Aim
 The aim of this project is to build a tool to identify communities and influencers in a social network. The tool should be able to:
-- Load a social graph
+- ~~Load a social graph~~
 - Run community detection and some analytical algorithms
 - Visualize the network
 
-### Tasks:
-#### 1. Load the dataset
-- Load the following Facebook dataset (The nodes represent the users and links represent the friendships between users) provided from: http://snap.stanford.edu/data/egonets-Facebook.html
+### Tasks: 
+#### ~~1. Load the dataset~~
+-  ~~Load the following Facebook dataset (The nodes represent the users and links represent the friendships between users) provided from: http://snap.stanford.edu/data/egonets-Facebook.html~~
 #### 2. Implementation
 - Implement Louvain method of community detection
 - Implement Degree centrality measure
