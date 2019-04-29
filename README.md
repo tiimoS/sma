@@ -10,7 +10,7 @@ The aim of this project is to build a tool to identify communities and influence
 #### ~~1. Load the dataset~~
 -  ~~Load the following Facebook dataset (The nodes represent the users and links represent the friendships between users) provided from: http://snap.stanford.edu/data/egonets-Facebook.html~~
 #### 2. Implementation
-- Implement Louvain method of community detection
+- Implement Louvain method of community detection --> Timo: work in progress
 - Implement Degree centrality measure
 - Implement Random Walk algorithm
 Perform the following tasks using the previous implementations:
