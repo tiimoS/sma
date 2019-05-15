@@ -27,8 +27,8 @@ if __name__ == "__main__":
     sum = 0
     for i in degree_list:
         sum += max_degree - i
-    degree_centrality = sum / (facebook_nodes - 1) * (facebook_nodes - 2)
-    print("degree_centrality(G)", degree_centrality)
+        degree_centrality = sum / (facebook_nodes - 1) * (facebook_nodes - 2)
+        print("degree_centrality(G)", degree_centrality)
 
     plt.xlabel('degree x ')
     plt.ylabel('frequence of degree(x)')
