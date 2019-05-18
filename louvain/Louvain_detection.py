@@ -11,11 +11,10 @@ import math
 
 
 graph = nx.read_edgelist('data/testgraph2.txt')
-#graph = nx.read_edgelist('facebook_combined.txt')
+#graph = nx.read_edgelist('data/facebook_combined.txt')
 m = graph.number_of_edges()
 graph_nodes = {}
 community_dict = {}
-community_list = defaultdict(list)
 
 
 def louvain_method():
@@ -433,6 +432,7 @@ def visualize_network(file_name, communities):
     :param communities: list of communities
     :return: matplot showing the network with colored communities
     """
+    print('Visualizing communities...')
     plt.figure(num=None, figsize=(100, 100), dpi=300)
     plt.axis('off')
     fig = plt.figure(1)

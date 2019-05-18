@@ -2,6 +2,7 @@ import networkx as nx
 from collections import defaultdict
 
 graph = nx.read_edgelist('data/testgraph2.txt')
+#graph = nx.read_edgelist('data/facebook_combined.txt')
 community_top_users = defaultdict(list)
 nr_top_users = 2
 
