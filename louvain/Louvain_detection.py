@@ -9,8 +9,9 @@ import matplotlib.colors as pltc
 import time
 import math
 
-#graph = nx.read_edgelist('testgraph2.txt')
-graph = nx.read_edgelist('facebook_combined.txt')
+
+graph = nx.read_edgelist('data/testgraph2.txt')
+#graph = nx.read_edgelist('facebook_combined.txt')
 m = graph.number_of_edges()
 graph_nodes = {}
 community_dict = {}
@@ -455,12 +456,3 @@ def visualize_network(file_name, communities):
     plt.savefig(file_name, bbox_inches="tight")
     pylab.close()
     del fig
-
-
-def main():
-    communities = louvain_method()
-    visualize_network("communities.pdf", communities)
-
-
-if __name__ == '__main__':
-    main()
