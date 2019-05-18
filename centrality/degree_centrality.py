@@ -8,7 +8,7 @@ nr_top_users = 2
 
 def top_users(communities):
     """
-    Returns the n top users (in our case n=2) with the highest centralityiii degree from each community.
+    Returns the n top users (in our case n=2) with the highest old_centrality degree from each community.
     :param communities: list of communities
     :return: a dictionary of community top users with the community as key and the list of top users as values
     """
@@ -20,7 +20,7 @@ def top_users(communities):
 
 def highest_degrees_in_community(community):
     """
-    Returns the highest n top users from single community based on degree centralityiii
+    Returns the highest n top users from single community based on degree old_centrality
     :param community: Community object holding the node objects
     :return: a list of the n top user's node keys
     """
