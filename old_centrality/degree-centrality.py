@@ -1,30 +1,21 @@
-import networkx as nx
+import ast
+from collections import Counter
+import matplotlib.pyplot as plt
 
-graph = nx.read_edgelist('data/testgraph2.txt')
+if __name__ == "__main__":
 
-
-def highest_degree_in_community(community):
-    sorted_community_nodes = community.total_nodes.sort(key=lambda node: node.x)
-    print(sorted_community_nodes)
-
-
-
-    '''
-    
     facebook_nodes = 4039
-    degree_file = "facebook_combined.txt" 
-    
+    degree_file = "facebook_combined.txt"
 
     max_degree = 0
     degree_list = []
 
     with open(degree_file, 'r')as file:
         for line in file:
-            size = ast.literal_eval(line.split(' ',1)[1])
+            size = ast.literal_eval(line.split(' ', 1)[1])
             degree_list.append(size)
 
     max_degree = max(degree_list)
-
 
     print("max degree is ", max_degree)
     print("total degree list is Cd(v) =  ", degree_list)
@@ -38,9 +29,7 @@ def highest_degree_in_community(community):
     plt.xlabel('degree x ')
     plt.ylabel('frequence of degree(x)')
     plt.title('Degree Distribution')
-    
 
     counts = Counter(degree_list)
     plt.bar(range(len(counts)), counts.values())
-    plt.show()'''
-
+    plt.show()
