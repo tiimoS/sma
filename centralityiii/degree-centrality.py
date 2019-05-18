@@ -1,11 +1,16 @@
-import ast
-from collections import Counter
-import matplotlib.pyplot as plt
+import networkx as nx
+
+graph = nx.read_edgelist('data/testgraph2.txt')
+
+
+def highest_degree_in_community(community):
+    sorted_community_nodes = community.total_nodes.sort(key=lambda node: node.x)
+    print(sorted_community_nodes)
 
 
 
-if __name__ == "__main__":
-
+    '''
+    
     facebook_nodes = 4039
     degree_file = "facebook_combined.txt" 
     
@@ -37,4 +42,5 @@ if __name__ == "__main__":
 
     counts = Counter(degree_list)
     plt.bar(range(len(counts)), counts.values())
-    plt.show()
+    plt.show()'''
+

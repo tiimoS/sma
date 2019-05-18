@@ -16,7 +16,7 @@ def random_walk(communities):
 
     '''
     Distribute three messages across the Facebook network using the random walk
-    algorithm, start each walk from a different community using its highest degree centrality user. 
+    algorithm, start each walk from a different community using its highest degree centralityiii user. 
     Terminate the walk when at least one node from each community has been reached.
     '''
 
