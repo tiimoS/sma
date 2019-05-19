@@ -2,11 +2,10 @@ import networkx as nx
 import random
 from centrality.degree_centrality import highest_degrees_in_community
 
-graph = nx.read_edgelist('data/testgraph2.txt')
-#graph = nx.read_edgelist('data/facebook_combined.txt')
+graph = nx.Graph()
 
 
-def distribute_messages(communities):
+def distribute_messages(graph_network, communities):
     """
     Traverses network from given initial node as random walk. Takes the node and its neighbours and randomly selects
     one. Revisiting already visited nodes is possible
@@ -15,6 +14,8 @@ def distribute_messages(communities):
     :param initial_node: initial node to start random walk from
     :return: walked path
     """
+    global graph
+    graph = graph_network
     walked_paths = []
     # Pick three random communities
     start_communities = []
@@ -24,7 +25,7 @@ def distribute_messages(communities):
 
     # Get top user from community
     for community in start_communities:
-        top_user = highest_degrees_in_community(community)[0]
+        top_user = highest_degrees_in_community(graph_network, community)[0]
         walk_path = random_walk(communities, top_user)
         walked_paths.append(walk_path)
 

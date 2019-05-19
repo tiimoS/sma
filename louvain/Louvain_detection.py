@@ -10,14 +10,13 @@ import time
 import math
 
 
-graph = nx.read_edgelist('data/testgraph2.txt')
-#graph = nx.read_edgelist('data/facebook_combined.txt')
-m = graph.number_of_edges()
+graph = nx.Graph()
+m = 0
 graph_nodes = {}
 community_dict = {}
 
 
-def louvain_method():
+def louvain_method(graph_network):
     """
     Runs the louvain algorithm over the nodes of the networks and e.g. forms new communities that maximize the
     modularity gain. First, it creates a single node community for each node in the network. We then iterate over all
@@ -30,6 +29,9 @@ def louvain_method():
 
     :return: a list of communities for the network
     """
+    global graph, m
+    graph = graph_network
+    m = graph.number_of_edges()
     repeat_louvain = True
     is_hyperrun = False
     passage = 0
@@ -425,13 +427,15 @@ class Community:
             self.key += "|" + str(node)
 
 
-def visualize_network(file_name, communities):
+def visualize_network(graph_network, file_name, communities):
     """
     Visualizes the communities by coloring the nodes belonging to the same community in the same color
     :param file_name: name of file to store the graph
     :param communities: list of communities
     :return: matplot showing the network with colored communities
     """
+    global graph
+    graph = graph_network
     print('Visualizing communities...')
     plt.figure(num=None, figsize=(100, 100), dpi=300)
     plt.axis('off')
