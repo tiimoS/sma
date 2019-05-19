@@ -1,6 +1,6 @@
 from centrality.degree_centrality import top_users
 from louvain.Louvain_detection import louvain_method
-from louvain.Louvain_detection import visualize_network
+from visualization.Visualizer import visualize_network
 from random_walk.randomWalk import distribute_messages
 
 import networkx as nx
