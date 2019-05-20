@@ -72,7 +72,7 @@ def louvain_method(graph_network):
     total_end_time = round((time.time() - total_start_time) * 1000, 3)
     print('\nTotal performance time louvain method: ', total_end_time, 'ms')
     print('Total number of communities detected: ', len(communities), ' Communities')
-    print('Modularity: ', old_mod)
+    print('Modularity: ', old_mod, '\n')
     return communities
 
 
