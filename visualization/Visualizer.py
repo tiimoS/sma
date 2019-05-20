@@ -58,4 +58,4 @@ def visualize_network(graph_network, file_name, communities, path, edge_color):
     plt.savefig(file_name, bbox_inches="tight")
     pylab.close()
     del fig
-    print('Finished visualization, saved as ', file_name)
+    print('Finished visualization, saved as ', file_name, '\n')

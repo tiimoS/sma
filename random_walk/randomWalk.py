@@ -25,7 +25,7 @@ def distribute_messages(graph_network, communities):
 
     # Get top user from community
     for community in start_communities:
-        top_user = highest_degrees_in_community(graph_network, community)[0]
+        top_user = list(highest_degrees_in_community(graph_network, community))[0]
         walk_path = random_walk(communities, top_user)
         walked_paths.append(walk_path)
 

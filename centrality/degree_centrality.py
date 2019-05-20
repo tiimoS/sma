@@ -30,7 +30,7 @@ def highest_degrees_in_community(graph_network, community):
     graph = graph_network
     sorted_community_nodes = list(sorted(community.total_nodes, key=lambda node: node.degree, reverse=True))
 
-    top_users = []
+    top_users = {}
     for i in range(nr_top_users):
-        top_users.append(sorted_community_nodes[i].key)
+        top_users[sorted_community_nodes[i].key] = sorted_community_nodes[i].degree
     return top_users
