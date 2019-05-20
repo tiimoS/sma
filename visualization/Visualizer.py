@@ -25,7 +25,7 @@ def visualize_network(graph_network, file_name, communities, path, edge_color):
     global graph, pos
     graph = graph_network
 
-    print('Visualizing random walk...')
+    print('Visualizing Network...')
     plt.figure(num=None, figsize=(100, 100), dpi=300)
     plt.axis('off')
     fig = plt.figure(1)
