@@ -2,7 +2,7 @@
 ## Project 1 – Community Detection in a Facebook network
 
 ### Results
-All visualizations - louvain and random walk - are stored in the ~/results folder. 
+All visualizations - louvain and random walk - are stored in the ~/results folder. It is recommended to download the results .pdf files, to better zoom on the individual nodes. 
 
 ### Setup
 The project is running on Anaconda distribution of Python 3.7. 
