@@ -13,7 +13,7 @@ graph = nx.read_edgelist('data/facebook_combined.txt')
 
 def main():
     communities = louvain_method(graph)
-    visualize_network(graph, "louvain_communities.pdf", communities, [], [])
+    #visualize_network(graph, "louvain_communities.pdf", communities, [], [])
     find_top_users(communities)
     run_random_walks(communities)
 

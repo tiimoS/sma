@@ -36,18 +36,17 @@ def visualize_network(graph_network, file_name, communities, path, edge_color):
     pos = nx.spring_layout(graph, iterations=100)
     for community in communities:
         community = [node.key for node in community.total_nodes]
-        nx.draw_networkx_nodes(graph, pos, nodelist=community, node_color=colors[i], node_size=3000)
+        nx.draw_networkx_nodes(graph, pos, nodelist=community, node_color=colors[i])
         i += 1
     nx.draw_networkx_edges(graph, pos, edge_color='k', width=0.01)
     nx.draw_networkx_labels(graph, pos)
 
-    nx.draw_networkx_edges(graph, pos, edge_color='k', width=0.01)
     if len(path) > 0:
         edge_list = []
         for i in range(len(path) - 1):
             edge = (path[i], path[i + 1])
             edge_list.append(edge)
-        nx.draw_networkx_edges(graph, pos, edgelist=edge_list, edge_color=edge_color, width=10)
+        nx.draw_networkx_edges(graph, pos, edgelist=edge_list, edge_color=edge_color, width=0.1)
 
     cut = 1.4
     xmax = cut * max(xx for xx, yy in pos.values())
