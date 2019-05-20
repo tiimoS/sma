@@ -44,3 +44,5 @@ def visualize_network(graph_network, file_name, communities):
     plt.savefig(file_name, bbox_inches="tight")
     pylab.close()
     del fig
+
+

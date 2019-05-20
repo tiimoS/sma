@@ -23,5 +23,9 @@ def main():
         print('Random Walk: ', walk)
 
 
+    # visualize the output of applying Random Walk algorithm, by highlighting the sequence of nodes selected in a path
+    
+
+
 if __name__ == '__main__':
     main()
